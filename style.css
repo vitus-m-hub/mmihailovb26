@@ -1,23 +1,120 @@
 body {
-    font-family: sans-serif;
+    font-family: 'Courier New', monospace;
+    background-color: #000000;
+    color: #00ff00;
+    margin: 0;
+    padding: 0;
 }
 
-h1{
-    font-size: 50px;
-    text-align: center;
-}
-
-.link-header{
+header, footer {
+    background-color: #111111;
+    padding: 20px;
     display: flex;
-    justify-content: flex-end;
-    border-bottom: 1px dashed navy ;
+    justify-content: center;
+    border-bottom: 2px dashed #00ff00;
 }
 
-nav{
-    font-size: 20px;
+main {
+    max-width: 900px;
+    margin: auto;
+    padding: 30px;
+    background-color: #101010;
+    border: 2px solid #00ff00;
+}
+
+h1 {
+    text-align: center;
+    font-size: 36px;
+    color: #ffff00;
+    text-shadow: 1px 1px #00ff00;
+}
+
+h2 {
+    color: #ffff00;
+    border-left: 4px solid #00ff00;
+    padding-left: 10px;
+}
+
+.link-header {
+    font-size: 22px;
+    color: #00ff00;
     text-decoration: none;
-    color: royalblue;
-    margin: 30px;
-    padding: 10px;
 }
 
+.link-header:hover {
+    color: #ffff00;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.link-nav {
+    padding: 10px 20px;
+    border: 2px solid #00ff00;
+    color: #00ff00;
+    background-color: transparent;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.link-nav:hover {
+    background-color: #00ff00;
+    color: #000000;
+    transform: scale(1.1);
+}
+
+.link-text {
+    color: #00ffff;
+    text-decoration: none;
+}
+
+.link-text:hover {
+    text-decoration: underline;
+}
+
+img {
+    border: 2px solid #00ff00;
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.03);
+}
+
+footer .social img {
+    width: 80px;
+    height: 80px;
+    filter: hue-rotate(90deg);
+    transition: transform 0.3s ease;
+}
+
+footer .social img:hover {
+    transform: rotate(-5deg) scale(1.2);
+}
+
+.text-big {
+    text-align: center;
+    color: #00ffff;
+    font-size: 18px;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+}
